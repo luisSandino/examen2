@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+
+  </head>
+    <body ng-app="starter" ng-controller="CameraCtrl">
+      <ion-pane>
+        <ion-header-bar class="bar-stable">
+          <h1 class="title">Luis Sandino</h1>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="list card">
+            
+            <div class="item item-body">
+                  
+              <div class="item item-image">
+                <img ng-src="{{lastPhoto}}" style="max-width: 100%">
+              </div>
+
+             
+                 <button class="button-float video-button">
+                  <i class="icon ion-videocamera custom-icon"></i>
+                </button>
+                <button class="button-float photo-button" ng-click="getPhoto()">
+                  <i class="icon ion-camera custom-icon"></i>
+                </button>
+                <button class="button-float check-button" ng-click="postPhoto()">
+                  <i class="icon ion-checkmark check-icon"></i>
+                </button>       
+              
+             
+              <div>
+                <p class="item" href="#">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam porro natus labore reiciendis, cupiditate quae libero sunt culpa. Officiis voluptatibus blanditiis quaerat esse, rem reprehenderit totam assumenda, quibusdam vero amet!
+                </p>
+              </div>
+              
+            </div>
+          </div>
+         
+         
+          <div class="list">
+          <ul>
+            <li>
+              <a class="item item-thumbnail-left list-text" href="#">
+              <img ng-src="{{lastPhoto}}">
+              <h3>hola</h3>
+              <p>hola</p>
+              <i class="icon ion-chevron-up custom-icon up-button"></i>
+            </a>
+            </li>
+          </ul>
+            
+          </div>
+        
+        </ion-content>
+      </ion-pane>
+    </body>
+  
+</html>
+
+
+
